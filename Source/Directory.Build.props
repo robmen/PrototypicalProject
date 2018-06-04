@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+
+    <RootFolder>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\))</RootFolder>
+    <BaseIntermediateOutputPath>$(RootFolder)Build\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <OutputPath>$(RootFolder)Build\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+</Project>
