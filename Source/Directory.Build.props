@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
+    <ProjectName Condition=" '$(ProjectName)' == '' ">$(MSBuildProjectName)</ProjectName>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <RootFolder>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\))</RootFolder>
-    <BaseIntermediateOutputPath>$(RootFolder)Build\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>$(RootFolder)Build\obj\$(ProjectName)\</BaseIntermediateOutputPath>
     <OutputPath>$(RootFolder)Build\$(Configuration)\</OutputPath>
   </PropertyGroup>
 </Project>
